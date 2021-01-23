@@ -1,0 +1,20 @@
+JWT
+
+Installar dependencia bcryptjs
+yarn add bcryptjs
+
+Probar el endpoint localhost:8080/users/create
+y verificar que funciona el hash
+
+setup USERS
+    create migration
+        npx sequelize-cli migration:create --name ddl-create-users-table
+    
+    edit migration
+        server\migrations\20200307002528-ddl-create-users-table.js
+
+    run migration
+        npx sequelize-cli db:migrate
+
+Install JWT modules
+    yarn add jsonwebtoken express-jwt

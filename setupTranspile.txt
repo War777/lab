@@ -1,0 +1,60 @@
+Steps for setup
+
+install yarn
+
+yarn global add express-generator
+
+express PROJECT_NAME --no-view --git
+
+create folder -> ./server
+
+Move bin/, app.js, routes/ into ./server
+
+Rename ./server/bin/www to www.js
+
+Leave public/ folder at project root.
+
+
+Convert files to es6 syntax
+    ./server/bin/www.js
+    ./server/routes/index.js
+    ./server/routes/users.js
+    ./server/app.js
+
+Install npm-run-all
+yarn add npm-run-all
+
+Install babel, nodemon, and rimraf
+yarn add @babel/core @babel/cli @babel/preset-env nodemon rimraf
+
+Add transpile configuration
+// package.json
+{  
+  // .. contents above
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  },
+}
+
+Add build scripts
+"transpile": "babel ./server --out-dir dist-server",
+"clean": "rimraf dist-server",
+"build": "npm-run-all clean transpile"
+
+Add ENV scripts (Remember in windows yu have to use SET for vairables)
+"dev": "NODE_ENV=development npm-run-all build server",
+"prod": "NODE_ENV=production npm-run-all build server",
+
+Add Nodemon scripts
+
+// package.json
+"nodemonConfig": { 
+  "exec": "npm run dev",
+  "watch": ["server/*", "public/*"],
+  "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"]
+},
+
+
+Para usar ASYNC AWAIT hay que instalar babel-polyfill e importarlo en el main
+del proyecto, en este caso es ./dist-server/bin/www.js
+import "babel-polyfill";

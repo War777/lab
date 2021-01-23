@@ -1,0 +1,36 @@
+DB config
+
+    install postgres
+    check it runs on port 5432
+    yarn add pg pg-hstore
+
+    Instalar UUID Extension
+        CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+    Probarla
+        SELECT uuid_generate_v4();
+
+    Crear modelo basico para usuarios.
+        id
+        names
+        surnames
+        password
+        emailAddress
+        createdAt
+        updatedAt
+
+    Instale el sequelize-cli
+        yarn add --dev sequelize-cli
+
+    Hice bootstraping del proyecto para sequelize
+        npx sequelize-cli init
+
+    Movi los folders config, migrations, seeders, models a ./server
+
+    [] Crear Migraciones
+        [o] Users
+            Products
+            order
+            
+    [] Asociar modelos.
+    [] Crear Migracion usuario producto.

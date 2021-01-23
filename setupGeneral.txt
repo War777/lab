@@ -1,0 +1,12 @@
+General
+setup back
+setup db
+
+TO DO.
+[] Set JWT for login
+[] Set middleware for protected routes
+[] Set grapqhl login.
+
+
+jwt-react-auth
+oldback
