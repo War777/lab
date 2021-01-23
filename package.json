@@ -17,7 +17,10 @@
     "presets": [
       "@babel/preset-env"
     ],
-    "include": ["server", "server/config"]
+    "include": [
+      "server",
+      "server/config"
+    ]
   },
   "nodemonConfig": {
     "exec": "yarn run dev",
@@ -34,6 +37,7 @@
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.6",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.8.6",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
