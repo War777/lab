@@ -58,3 +58,4 @@ Add Nodemon scripts
 Para usar ASYNC AWAIT hay que instalar babel-polyfill e importarlo en el main
 del proyecto, en este caso es ./dist-server/bin/www.js
 import "babel-polyfill";
+https://babeljs.io/docs/en/babel-polyfill

@@ -3,10 +3,6 @@
 /**
  * Module dependencies.
  */
-
-// var app = require('../app');
-// var debug = require('debug')('back:server');
-// var http = require('http');
 import '@babel/polyfill';
 import app from '../app';
 import debugLib from 'debug';
