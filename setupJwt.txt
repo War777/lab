@@ -18,3 +18,9 @@ setup USERS
 
 Install JWT modules
     yarn add jsonwebtoken express-jwt
+
+
+Related articles
+    https://www.npmjs.com/package/express-jwt
+    https://www.npmjs.com/package/jsonwebtoken
+    https://stackoverflow.com/questions/31496439/express-jwt-not-respecting-unprotected-paths
